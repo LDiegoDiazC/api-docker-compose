@@ -1,0 +1,23 @@
+#Introducción a Microservicios: Arquitectura y Contenedores
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: mi_api_db
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  api:
+    build: ./api
+    container_name: php_api
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      - ./api:/var/www/html
