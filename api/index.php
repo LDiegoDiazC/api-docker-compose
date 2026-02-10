@@ -1,4 +1,3 @@
-<!-- Introducción a Microservicios: Arquitectura y Contenedores -->
 <?php
 header("Content-Type: application/json");
 require 'config.php';

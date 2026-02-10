@@ -1,4 +1,3 @@
-<!-- Introducción a Microservicios: Arquitectura y Contenedores -->
 <?php
 $host = 'db';
 $db   = 'mi_api_db';

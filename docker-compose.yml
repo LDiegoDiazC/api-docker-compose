@@ -2,6 +2,7 @@
 services:
   db:
     image: mysql:8.0
+    #platform: linux/amd64 descomentar si se trabaja en M1/M2
     container_name: mysql_db
     restart: always
     environment:
